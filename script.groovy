@@ -12,5 +12,6 @@ def deploy() {
 
 def docker() {
   echo "I think docker is ready to go..."
-         
+}
+
 return this
