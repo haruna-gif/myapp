@@ -31,12 +31,5 @@ pipeline {
                 }
             }
         }
-        stage('Build-image') {
-            steps {
-                script {
-                    gv.image()
-                }
-            }
-        }
     }
 }
