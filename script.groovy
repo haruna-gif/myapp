@@ -1,5 +1,5 @@
 def build() {
-  echo "This is Building verison ${ENV}..."
+  echo "This is Building verison ${VER}..."
 }
 
 def test() {
