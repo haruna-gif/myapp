@@ -5,7 +5,7 @@ pipeline {
    parameters {
     choice(name: 'VERSION', choices: ['0.0.1', '0.0.2', '0.0.3'], description: 'Select Version')
     booleanParam(name: 'execute', defaultValue: true, description: 'Dont wanna do')
-    string(name: 'NEW', defaultValue: 'dev', description: 'which environment? dev or prod')
+    string(name: 'ENV', defaultValue: 'dev', description: 'which environment? dev or prod')
     }
     stages {
         stage('init') {
