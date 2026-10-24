@@ -2,6 +2,9 @@ def gv
 
 pipeline {
     agent any
+    environment {
+        VER = '1.0.0'
+    }
     stages {
         stage('init') {
             steps {
