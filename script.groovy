@@ -7,7 +7,7 @@ def test() {
 }
 
 def deploy() {
-  echo "This is deploying state..."
+  echo "This is deploying ${VERSION} "
 }
 
 def docker() {
