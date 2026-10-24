@@ -36,11 +36,11 @@ pipeline {
             }
         }
         stage('Docker') {
-             when {
-                  expression {
-                      params.execute
-                 }
-             }
+            when {
+                expression {
+                    params.execute
+                }
+            }
             steps {
                 script {
                     gv.docker()
