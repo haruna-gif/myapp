@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    stage('init') {
+            steps {
+                echo 'Now we are starting in big...'
+            }
+        }
     stages {
         stage('Build') {
             steps {
