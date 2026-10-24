@@ -38,7 +38,7 @@ pipeline {
         stage('Docker') {
             steps {
                 when{
-                    expression{
+                    expression {
                         params.execute
                     }
                 }
