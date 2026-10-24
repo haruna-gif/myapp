@@ -1,35 +1,41 @@
+def gv
+
 pipeline {
     agent any
-
     stages {
-        stage('last') {
+        stage('init') {
             steps {
-                echo 'this is the last to commit here...'
-            }
-        }
-         stage('init') {
-            steps {
-                echo 'Now we are starting in big time...'
+                script {
+                    gv = load "script.groovy"
+                }
             }
         }
         stage('Build') {
             steps {
-                echo 'We are building...'
+                script {
+                    gv.build()
+                }
             }
         }
          stage('Test') {
             steps {
-                echo 'We are testing...'
+                script {
+                    gv.test()
+                }
             }
         }
          stage('Deploy') {
             steps {
-                echo 'We are deploying...'
+                script {
+                    gv.deploy()
+                }
             }
         }
         stage('Build-image') {
             steps {
-                echo 'We are building image...'
+                script {
+                    gv.image()
+                }
             }
         }
     }
