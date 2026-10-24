@@ -31,5 +31,12 @@ pipeline {
                 }
             }
         }
+        stage('Docker') {
+            steps {
+                script {
+                    gv.docker()
+                }
+            }
+        }
     }
 }
