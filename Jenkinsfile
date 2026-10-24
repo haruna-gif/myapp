@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                new.NEW = input message: "where to build?", ok: "Yes" parameters: [choice(name: 'NEW', choices['ogun', 'lagos', 'Akure'], description: '')]
+                env.NEW = input message: "where to build?", ok: "Yes" parameters: [choice(name: 'NEW', choices['ogun', 'lagos', 'Akure'], description: '')]
                 script {
                     gv.build()
                 }
