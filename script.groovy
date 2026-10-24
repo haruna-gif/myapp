@@ -1,5 +1,6 @@
 def build() {
   echo "This is Building the app ..."
+  echo "Building in ${NEW}"
 }
 
 def test() {
@@ -13,6 +14,7 @@ def deploy() {
 
 def docker() {
   echo "I think docker is ready to go..."
+  echo "dockering in ${NEW}"
 }
 
 return this
