@@ -1,5 +1,5 @@
 def build() {
-  echo "This is Building verison ${VER}..."
+  echo "This is Building ..."
 }
 
 def test() {
@@ -7,7 +7,7 @@ def test() {
 }
 
 def deploy() {
-  echo "This is deploying ${VERSION} "
+  echo "This is deploying ${params.VERSION} "
 }
 
 def docker() {
