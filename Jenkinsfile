@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage('last') {
+            steps {
+                echo 'this is the last to commit here...'
+            }
+        }
          stage('init') {
             steps {
                 echo 'Now we are starting in big time...'
