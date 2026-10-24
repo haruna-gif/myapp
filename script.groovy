@@ -4,6 +4,7 @@ def build() {
 
 def test() {
   echo "This is testing state..."
+  echo "I wanna know where to ${params.ENV}."
 }
 
 def deploy() {
