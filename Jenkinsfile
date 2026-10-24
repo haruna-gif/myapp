@@ -2,8 +2,9 @@ def gv
 
 pipeline {
     agent any
-    environment {
-        VER = '1.0.0'
+   parameters {
+    choice(name: 'VERSION', choice: ['0.0.1', '0.0.2', '0.0.3'], decription: 'Select Version')
+    booleanparam(name: 'execute', defaultValue: true, decription: 'Dont wanna do')
     }
     stages {
         stage('init') {
