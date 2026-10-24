@@ -9,3 +9,4 @@ def test() {
 def deploy() {
   echo "This is deploying state..."
 }
+return this
