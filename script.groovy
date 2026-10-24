@@ -10,6 +10,4 @@ def deploy() {
   echo "This is deploying state..."
 }
 
-def image() {
-  echo "image wanna gimme headache..."
 return this
