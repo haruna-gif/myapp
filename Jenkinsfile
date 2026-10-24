@@ -3,7 +3,7 @@ pipeline {
 
     stage('init') {
             steps {
-                echo 'Now we are starting in big...'
+                echo 'Now we are starting in big time...'
             }
         }
     stages {
