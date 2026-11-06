@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+    java-maven-app:
+      image: haroonapako/my-job:001
+      ports:
+        - 8888:80
+    postgres:
+      image: postgres:
+      ports:
+        - 5432:5432
+      environment:
+        - POSTGRES_PASSWORD=my-pwd
