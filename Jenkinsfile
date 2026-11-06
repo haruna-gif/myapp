@@ -35,7 +35,10 @@ pipeline {
          stage('Deploy') {
             steps {
                 script {
-                    gv.deploy()
+                    def dockerCmd = 'docker start 327c63471124'
+                    sshagent(credentials: ['ec2_Keys'], executable: '') {
+                        sh "ssh -o StrictHostKeyChecking=no ec2-user@13.60.191.35 ${dockerCmd}"
+                    }
                 }
             }
         }
