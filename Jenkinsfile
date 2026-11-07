@@ -35,8 +35,9 @@ pipeline {
          stage('Deploy') {
             steps {
                 script {
-                    def dockerCmd = "docker compose -f docker-compose.yaml up --detach"
+                    def dockerCmd = "bash ./server-cmd.sh"
                     sshagent(credentials: ['ec2_Keys'], executable: '') {
+                        sh "scp server-cmd.sh ec2-user@13.60.191.35:/home/ec2-user"
                         sh "scp docker-compose.yaml ec2-user@13.60.191.35:/home/ec2-user"
                         sh "ssh -o StrictHostKeyChecking=no ec2-user@13.60.191.35 ${dockerCmd}"
                     }
